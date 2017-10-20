@@ -13,7 +13,19 @@ def test_data_generator(paths, out_dir, mask_dir,
     """Make prediction on test data and save the result
 
     Args:
-
+        paths: list of string
+            list of full paths for test data
+        out_dir: string
+            The directory that you would like to store the output result
+        mask_dir: string
+            The folder containing data mask
+        patch_size: int
+            The size of your triplanar patches
+        nb_classes: int
+        batch_size: int
+        model_path: string
+            path of the model storing the information of parameters
+        network: string
     """
     if network == 'TriplanarCNN':
         net = TriplanarCNN(patch_size, nb_classes)
